@@ -9,6 +9,9 @@ export default {
         './resources/views/**/*.blade.php',
         './resources/js/**/*.tsx',
     ],
+		corePlugins: {
+			preflight: false,
+		},
 
     theme: {
         extend: {

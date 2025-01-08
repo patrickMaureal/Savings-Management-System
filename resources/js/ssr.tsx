@@ -4,6 +4,8 @@ import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 import ReactDOMServer from 'react-dom/server';
 import { RouteName } from 'ziggy-js';
 import { route } from '../../vendor/tightenco/ziggy';
+import { Provider } from './Components/chakra/ui/provider';
+import { defaultSystem } from "@chakra-ui/react"
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
 
@@ -27,7 +29,11 @@ createServer((page) =>
                 });
             /* eslint-enable */
 
-            return <App {...props} />;
+            return (
+							<Provider>
+								<App {...props} />
+							</Provider>
+						);
         },
     }),
 );

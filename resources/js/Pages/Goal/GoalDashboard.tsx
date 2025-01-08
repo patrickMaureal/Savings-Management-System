@@ -1,4 +1,7 @@
+import { Avatar } from "@/Components/chakra/ui/avatar"
+import { Button } from "@/Components/chakra/ui/button"
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout"
+import { HStack, VStack } from "@chakra-ui/react"
 import { Head } from "@inertiajs/react"
 
 const GoalDashboard = () => {
@@ -16,7 +19,11 @@ const GoalDashboard = () => {
                 <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div className="overflow-hidden bg-white shadow-sm sm:rounded-lg dark:bg-gray-800">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
-                            Goal Dashboard
+												<VStack>
+													<Button>Click me</Button>
+													<Button variant="solid">Solid</Button>
+													<Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
+												</VStack>
                         </div>
                     </div>
                 </div>
