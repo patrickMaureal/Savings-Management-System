@@ -33,7 +33,16 @@ export default function Authenticated({
                                 >
                                     Dashboard
                                 </NavLink>
+
+																<NavLink
+                                    href={route('goals.index')}
+                                    active={route().current('goals.*')}
+                                >
+                                    Goals
+                                </NavLink>
                             </div>
+
+                                
                         </div>
 
                         <div className="hidden sm:ms-6 sm:flex sm:items-center">

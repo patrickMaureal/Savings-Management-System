@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Goal;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class GoalController extends Controller
 {
@@ -12,7 +13,7 @@ class GoalController extends Controller
      */
     public function index()
     {
-        //
+			return Inertia::render('Goal/GoalDashboard');
     }
 
     /**
